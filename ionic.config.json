@@ -1,0 +1,8 @@
+{
+  "name": "Fireplaces",
+  "app_id": "e7d45b24",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
