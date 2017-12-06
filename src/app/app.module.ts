@@ -1,30 +1,49 @@
+import { MapEffects } from './fireplaces-map/state/map.effects';
+import { DataPersistence, NxModule } from '@nrwl/nx';
+import { FireplacesService } from './fireplaces-commons/services/fireplaces.service';
 import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { StatusBar } from '@ionic-native/status-bar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
-import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { AppComponent } from './app.component';
+
+// Libraries
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { StoreRouterConnectingModule, routerReducer } from '@ngrx/router-store';
+
+// Apps modules
+import { appRoutes } from './app.routing';
+
+import { FireplacesMapModule } from './fireplaces-map/fireplaces-map.module';
+import { FireplacesCommonsModule } from './fireplaces-commons/fireplaces-commons.module';
+
+// Reducers
+import { reducers } from './reducers';
+import { EffectsModule } from '@ngrx/effects';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
-    MyApp,
-    HomePage
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    BrowserAnimationsModule,
+    NxModule.forRoot(),
+    RouterModule.forRoot(
+      appRoutes,
+      // { enableTracing: true } // <-- debugging purposes only
+    ),
+    FireplacesMapModule,
+    FireplacesCommonsModule,
+    StoreModule.forRoot({ ...reducers, routerReducer}),
+    !environment.production ? StoreDevtoolsModule.instrument() : [],
+    StoreRouterConnectingModule,
+    EffectsModule.forRoot([])
   ],
-  bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-    HomePage
-  ],
-  providers: [
-    StatusBar,
-    SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+  providers: [ FireplacesService ],
+  bootstrap: [ AppComponent ]
 })
-export class AppModule {}
+export class AppModule { }

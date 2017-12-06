@@ -1,0 +1,36 @@
+{
+  "fireplaces": {
+  "Casal Sta Maria del Jaire": {
+    "name": "Casal Sta. Maria del Jaire",
+    "icon": "",
+    "location": {
+        "latitude": 41.603907,
+        "longitude": 2.300671
+    },
+    "type": "Associació",
+    "tags": [{
+      "name": "Esplai",
+      "description": "Centre d'educació en el lleure"
+    }],
+    "relationships": [{
+      "fireplace": "Esplai Grifoll"
+    }]
+  },
+  "Esplai Grifoll": {
+    "name": "Esplai Grifoll",
+    "icon": "",
+    "location": {
+        "latitude": 41.630844,
+        "longitude": 2.164118
+    },
+    "type": "Associació",
+    "tags": [{
+      "name": "Esplai",
+      "description": "Centre d'educació en el lleure"
+    }],
+    "relationships": [{
+      "fireplace": "Casal Sta Maria del Jaire"
+    }]
+  }
+}
+}
