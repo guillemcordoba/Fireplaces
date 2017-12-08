@@ -14,7 +14,7 @@ export class SidenavComponent implements OnInit {
   ngOnInit() {
   }
 
-  private toggleOpened() {
+  toggleOpened() {
     this.menuOpened = !this.menuOpened;
   }
 

@@ -11,7 +11,7 @@ export class AppComponent {
 
   constructor() {}
 
-  private toggleMenu(): void {
+  toggleMenu(): void {
     this.menuOpened = !this.menuOpened;
   }
 }
