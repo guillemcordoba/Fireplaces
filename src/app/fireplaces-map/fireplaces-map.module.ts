@@ -7,7 +7,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FireplacesMapComponent } from './map-component/fireplaces-map.component';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { mapReducer } from './state/map.reducer';
 
 @NgModule({
@@ -17,6 +17,7 @@ import { mapReducer } from './state/map.reducer';
     StoreModule.forFeature('map', mapReducer),
     EffectsModule.forFeature([MapEffects]),
     AgmCoreModule.forRoot(environment.googlemaps),
+    FlexLayoutModule
   ],
   declarations: [ FireplacesMapComponent ],
   providers: []

@@ -1,0 +1,16 @@
+<mat-sidenav-container fxFlexFill>
+  <mat-sidenav mode="over" [opened]="menuOpened">
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="toggleOpened()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Fireplaces</span>
+    </mat-toolbar>
+    <mat-list role="list">
+      <a mat-list-item routerLink="/fireplaces-map" role="listitem">Fireplaces map</a>
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <ng-content fxFlexFill></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

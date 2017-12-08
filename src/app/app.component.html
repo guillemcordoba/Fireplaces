@@ -1,9 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center" fxFlexFillfxLayout="row">
-  <nav>
-    <a routerLink="/fireplaces-map" routerLinkActive="active">Fireplaces map</a>
-    <a routerLink="/" routerLinkActive="active">Fireplaces</a>
-  </nav>
-  <router-outlet fxFlexFill></router-outlet>
+<div style="text-align:center" class="fill" fxLayout="column" fxFlexFill>
+  <app-sidenav [menuOpened]="menuOpened" fxFlexFill>
+      <app-map-toolbar (toggleMenu)="toggleMenu()"></app-map-toolbar>
+      <router-outlet fxLayout="column"></router-outlet>
+  </app-sidenav>
 </div>
-
