@@ -7,14 +7,13 @@ import {
   MatListModule
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MapToolbarComponent } from './map-toolbar/map-toolbar.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
-import { PlaceToolbarComponent } from './place-toolbar/place-toolbar.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { DataPersistence, NxModule } from '@nrwl/nx';
 import { StoreModule, Store } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MenuToggleComponent } from './components/menu-toggle/menu-toggle.component';
 
 @NgModule({
   imports: [
@@ -25,8 +24,8 @@ import { CommonModule } from '@angular/common';
     MatButtonModule, MatCheckboxModule, MatToolbarModule, MatSidenavModule, MatIconModule,
     MatListModule, FlexLayoutModule
   ],
-  declarations: [ SidenavComponent, MapToolbarComponent, PlaceToolbarComponent ],
+  declarations: [ SidenavComponent, MenuToggleComponent ],
   providers: [],
-  exports: [ SidenavComponent, MapToolbarComponent, PlaceToolbarComponent ]
+  exports: [ SidenavComponent, MenuToggleComponent ]
 })
 export class NavigationModule { }

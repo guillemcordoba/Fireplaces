@@ -5,3 +5,8 @@ html, body, app-root, .fill {
   margin: 0;
   padding: 0;
 }
+
+.toolbar-overlay {
+  position: fixed;
+  z-index: 10000;
+}

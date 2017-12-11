@@ -1,17 +1,22 @@
+import { NavigationState } from './../navigation/state/navigation.state';
+import { navigationReducer } from './../navigation/state/navigation.reducer';
+import { routerReducer, RouterReducerState } from '@ngrx/router-store';
 import { AppState } from './index';
-import { MapState } from './../fireplaces-map/state/map.state';
+import { ExploreState } from './../fireplaces-explore/state/explore.state';
 import { ActionReducerMap } from '@ngrx/store';
 
 // Import all reducers from the app
-import { mapReducer } from '../fireplaces-map/state/map.reducer';
+import { exploreReducer } from '../fireplaces-explore/state/explore.reducer';
 
 export const reducers: ActionReducerMap<AppState> = {
-  mapState: mapReducer
+  navigationState: navigationReducer,
+  exploreState: exploreReducer
 };
 
 export interface AppState {
-  mapState: MapState;
+  exploreState: ExploreState;
+  navigationState: NavigationState;
 }
 
-
-export const getMapState = (state: AppState) => state.mapState;
+export const getExploreState = (state: AppState) => state.exploreState;
+export const getNavigationState = (state: AppState) => state.navigationState;

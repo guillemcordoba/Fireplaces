@@ -1,11 +1,12 @@
-import { FireplacesMapComponent } from './fireplaces-map/map-component/fireplaces-map.component';
+import { ExploreComponent } from './fireplaces-explore/explore/explore.component';
 import { Routes } from '@angular/router';
 
 export const appRoutes: Routes = [
-  { path: 'fireplaces-map', component: FireplacesMapComponent },
-  { path: '',
-    redirectTo: '/fireplaces-map',
+  {
+    path: '',
+    redirectTo: '/explore',
     pathMatch: 'full'
   },
+  { path: 'explore', component: ExploreComponent }
   // { path: '**', component: PageNotFoundComponent }
 ];
