@@ -1,4 +1,4 @@
-import { ExploreComponent } from './fireplaces-explore/explore/explore.component';
+import { ExploreComponent } from './fireplaces-explore/components/explore/explore.component';
 import { Routes } from '@angular/router';
 
 export const appRoutes: Routes = [

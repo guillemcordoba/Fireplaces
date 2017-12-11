@@ -6,5 +6,6 @@ export const exploreInitialState: ExploreState = {
     'latitude': 41.603907,
     'longitude': 2.300671
   },
-  fireplaces: []
+  fireplaces: [],
+  tags: new Set()
 };

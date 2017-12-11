@@ -10,3 +10,11 @@ html, body, app-root, .fill {
   position: fixed;
   z-index: 10000;
 }
+
+.bottom {
+  bottom: 0;
+}
+
+mat-icon {
+  margin-right: 8px;
+}

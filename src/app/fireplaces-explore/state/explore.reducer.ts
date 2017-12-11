@@ -1,3 +1,4 @@
+import { Tag } from './../../commons/models/fireplaces.model';
 import { exploreInitialState } from './explore.init';
 import { ExploreState } from './explore.state';
 import { ExploreAction, ExploreActionsTypes } from './explore.actions';
@@ -16,8 +17,11 @@ export function exploreReducer(state: ExploreState = exploreInitialState, action
         .filter(r => action.payload.find(f => f.name === r.fireplace))
         .forEach(r => r.fireplaceLocation = action.payload.find(f => f.name === r.fireplace).location)
       );
+      // Extract the tags information from the available fireplaces
+      const tags: Set<string> = new Set([].concat(...action.payload.map(fireplace => fireplace.tags.map(t => t.name))));
       return Object.assign({}, state, {
-        fireplaces: action.payload
+        fireplaces: action.payload,
+        tags: tags
       });
     }
     default: {

@@ -1,5 +1,4 @@
 import { FireplacesService } from './../../commons/services/fireplaces.service';
-import { FireplacesMapComponent } from './../map-component/fireplaces-map.component';
 import { Injectable } from '@angular/core';
 import { Effect } from '@ngrx/effects';
 import { DataPersistence } from '@nrwl/nx';
@@ -7,7 +6,7 @@ import { of } from 'rxjs/observable/of';
 import { ExploreState } from './explore.state';
 import { FireplacesLoaded } from './explore.actions';
 import { ActivatedRouteSnapshot } from '@angular/router';
-import { ExploreComponent } from '../explore/explore.component';
+import { ExploreComponent } from '../components/explore/explore.component';
 
 @Injectable()
 export class ExploreEffects {
