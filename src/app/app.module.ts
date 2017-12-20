@@ -11,7 +11,13 @@ import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { StoreRouterConnectingModule, routerReducer } from '@ngrx/router-store';
-import { MatButtonModule, MatCheckboxModule, MatToolbarModule, MatSidenavModule, MatIconModule } from '@angular/material';
+import {
+  MatButtonModule,
+  MatCheckboxModule,
+  MatToolbarModule,
+  MatSidenavModule,
+  MatIconModule
+} from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 // Apps modules
@@ -30,15 +36,13 @@ import { EffectsModule } from '@ngrx/effects';
 import { environment } from '../environments/environment';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     NxModule.forRoot(),
     RouterModule.forRoot(
-      appRoutes,
+      appRoutes
       // { enableTracing: true } // <-- debugging purposes only
     ),
     NavigationModule,
@@ -50,10 +54,14 @@ import { environment } from '../environments/environment';
     StoreRouterConnectingModule,
     EffectsModule.forRoot([]),
     // Angular material
-    MatButtonModule, MatCheckboxModule, MatToolbarModule, MatSidenavModule, MatIconModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatIconModule,
     FlexLayoutModule
   ],
-  providers: [ FireplacesService ],
-  bootstrap: [ AppComponent ]
+  providers: [FireplacesService],
+  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

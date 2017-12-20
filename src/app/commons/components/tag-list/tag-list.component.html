@@ -1,3 +1,5 @@
-<mat-chip-list class="mat-chip-list-stacked">
-  <mat-chip *ngFor="let tag of tags">{{tag}}</mat-chip>
-</mat-chip-list>
+<mat-list role="list">
+  <a mat-list-item *ngFor="let tag of tags" routerLink="/explore" role="listitem">
+    {{tag}}
+  </a>
+</mat-list>

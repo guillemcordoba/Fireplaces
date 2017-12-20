@@ -9,6 +9,7 @@ html, body, app-root, .fill {
 .toolbar-overlay {
   position: fixed;
   z-index: 10000;
+  width: 100%;
 }
 
 .bottom {
@@ -17,4 +18,8 @@ html, body, app-root, .fill {
 
 mat-icon {
   margin-right: 8px;
+}
+
+.no-padding {
+  padding: 0 !important;
 }

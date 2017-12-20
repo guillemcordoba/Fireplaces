@@ -21,11 +21,16 @@ import { MenuToggleComponent } from './components/menu-toggle/menu-toggle.compon
     NxModule.forRoot(),
     // StoreModule.forFeature('map', mapReducer),
     // EffectsModule.forFeature([MapEffects]),
-    MatButtonModule, MatCheckboxModule, MatToolbarModule, MatSidenavModule, MatIconModule,
-    MatListModule, FlexLayoutModule
+    MatButtonModule,
+    MatCheckboxModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    FlexLayoutModule
   ],
-  declarations: [ SidenavComponent, MenuToggleComponent ],
+  declarations: [SidenavComponent, MenuToggleComponent],
   providers: [],
-  exports: [ SidenavComponent, MenuToggleComponent ]
+  exports: [SidenavComponent, MenuToggleComponent]
 })
-export class NavigationModule { }
+export class NavigationModule {}
