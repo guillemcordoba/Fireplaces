@@ -23,8 +23,9 @@ import { BottomTabsComponent } from './components/bottom-tabs/bottom-tabs.compon
   ],
   declarations: [
     TagListComponent,
-    FireplacesListComponent
+    FireplacesListComponent,
+    BottomTabsComponent
   ],
-  exports: [TagListComponent, FireplacesListComponent]
+  exports: [TagListComponent, FireplacesListComponent, BottomTabsComponent]
 })
 export class FireplacesCommonsModule {}
