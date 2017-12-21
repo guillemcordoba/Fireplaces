@@ -1,4 +1,3 @@
-import { FilterPipe } from './filter-pipe/filter.pipe';
 import { ExploreToolbarComponent } from './components/toolbar/explore-toolbar.component';
 import { DataPersistence, NxModule } from '@nrwl/nx';
 import { AgmCoreModule } from '@agm/core';
@@ -46,7 +45,6 @@ import { FireplacesCommonsModule } from '../commons/fireplaces-commons.module';
     FireplacesCommonsModule
   ],
   declarations: [
-    FilterPipe,
     FireplacesMapComponent,
     ExploreComponent,
     ExploreToolbarComponent,
