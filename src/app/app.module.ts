@@ -1,6 +1,5 @@
-import { MapEffects } from './fireplaces-map/state/map.effects';
+import { MenuToggleComponent } from './navigation/components/menu-toggle/menu-toggle.component';
 import { DataPersistence, NxModule } from '@nrwl/nx';
-import { FireplacesService } from './fireplaces-commons/services/fireplaces.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
@@ -12,12 +11,24 @@ import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { StoreRouterConnectingModule, routerReducer } from '@ngrx/router-store';
+import {
+  MatButtonModule,
+  MatCheckboxModule,
+  MatToolbarModule,
+  MatSidenavModule,
+  MatIconModule
+} from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 // Apps modules
 import { appRoutes } from './app.routing';
 
-import { FireplacesMapModule } from './fireplaces-map/fireplaces-map.module';
-import { FireplacesCommonsModule } from './fireplaces-commons/fireplaces-commons.module';
+import { NavigationModule } from './navigation/navigation.module';
+import { FireplacesHomeModule } from './fireplaces-home/fireplaces-home.module';
+import { FireplacesExploreModule } from './fireplaces-explore/fireplaces-explore.module';
+
+import { FireplacesCommonsModule } from './commons/fireplaces-commons.module';
+import { FireplacesService } from './commons/services/fireplaces.service';
 
 // Reducers
 import { reducers } from './reducers';
@@ -25,25 +36,32 @@ import { EffectsModule } from '@ngrx/effects';
 import { environment } from '../environments/environment';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     NxModule.forRoot(),
     RouterModule.forRoot(
-      appRoutes,
+      appRoutes
       // { enableTracing: true } // <-- debugging purposes only
     ),
-    FireplacesMapModule,
+    NavigationModule,
     FireplacesCommonsModule,
-    StoreModule.forRoot({ ...reducers, routerReducer}),
+    FireplacesExploreModule,
+    FireplacesHomeModule,
+    StoreModule.forRoot({ ...reducers, routerReducer: routerReducer }),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     StoreRouterConnectingModule,
-    EffectsModule.forRoot([])
+    EffectsModule.forRoot([]),
+    // Angular material
+    MatButtonModule,
+    MatCheckboxModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatIconModule,
+    FlexLayoutModule
   ],
-  providers: [ FireplacesService ],
-  bootstrap: [ AppComponent ]
+  providers: [FireplacesService],
+  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

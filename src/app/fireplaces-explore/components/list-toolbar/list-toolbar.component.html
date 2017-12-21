@@ -1,0 +1,20 @@
+<div class="mat-elevation-z4 toolbar-overlay bottom" fxLayout="column">
+  <div fxFlex="40%">
+    <app-tag-list *ngIf="tagtoggle.checked" [tags]="tags"></app-tag-list>
+    <!--<app-fireplaces-list *ngIf="fireplacestoggle.checked" [fireplaces]="fireplaces"></app-fireplaces-list>-->
+  </div>
+
+  <!-- Activator toolbar with button -->
+  <mat-toolbar class="no-padding">
+    <mat-button-toggle-group fxFlexFill fxLayout="row" fxLayoutAlign="center stretch">
+      <mat-button-toggle #tagtoggle fxFlex>
+        <mat-icon>label</mat-icon>
+        <span>Tags</span>
+      </mat-button-toggle>
+      <mat-button-toggle #fireplacestoggle fxFlex>
+        <mat-icon>home</mat-icon>
+        <span>Fireplaces</span>
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+  </mat-toolbar>
+</div>

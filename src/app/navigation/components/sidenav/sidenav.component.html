@@ -1,0 +1,16 @@
+<mat-sidenav-container fxFlexFill>
+  <mat-sidenav mode="over" [opened]="menuOpened$ | async">
+    <mat-toolbar color="primary">
+      <app-menu-toggle></app-menu-toggle>
+      <span>Fireplaces</span>
+    </mat-toolbar>
+    <mat-list role="list">
+      <a mat-list-item routerLink="/explore" role="listitem">
+        <mat-icon>explore</mat-icon>Explore
+      </a>
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <ng-content fxFlexFill></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

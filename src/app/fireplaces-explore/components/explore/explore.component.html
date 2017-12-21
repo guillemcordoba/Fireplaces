@@ -1,0 +1,6 @@
+<div fxLayout="column" fxFlexFill>
+  <app-explore-toolbar></app-explore-toolbar>
+  <app-fireplaces-map [location]="location$ | async" [fireplaces]="fireplaces$ | async" fxFlexFill>
+  </app-fireplaces-map>
+  <app-list-toolbar [tags]="tags$ | async"></app-list-toolbar>
+</div>

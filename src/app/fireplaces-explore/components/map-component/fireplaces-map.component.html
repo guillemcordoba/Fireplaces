@@ -1,0 +1,17 @@
+<agm-map fxFlexFill [streetViewControl]="false" [zoomControl]="false" [zoom]="14" [latitude]="location?.latitude" [longitude]="location?.longitude">
+  <ng-container *ngFor="let fireplace of fireplaces">
+
+    <agm-marker [latitude]="fireplace.location.latitude" [longitude]="fireplace.location.longitude">
+    </agm-marker>
+
+    <agm-polyline *ngIf="fireplace.relationships" [strokeColor]="'#2196f3'">
+      <ng-container *ngFor="let relationship of fireplace.relationships">
+        <agm-polyline-point *ngIf="relationship.fireplaceLocation" [latitude]="fireplace.location.latitude" [longitude]="fireplace.location.longitude">
+        </agm-polyline-point>
+        <agm-polyline-point *ngIf="relationship.fireplaceLocation" [latitude]="relationship.fireplaceLocation.latitude" [longitude]="relationship.fireplaceLocation.longitude">
+        </agm-polyline-point>
+      </ng-container>
+    </agm-polyline>
+
+  </ng-container>
+</agm-map>
