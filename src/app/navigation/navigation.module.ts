@@ -14,6 +14,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MenuToggleComponent } from './components/menu-toggle/menu-toggle.component';
+import { FireplacesCommonsModule } from '../commons/fireplaces-commons.module';
 
 @NgModule({
   imports: [
@@ -27,7 +28,8 @@ import { MenuToggleComponent } from './components/menu-toggle/menu-toggle.compon
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    FireplacesCommonsModule
   ],
   declarations: [SidenavComponent, MenuToggleComponent],
   providers: [],

@@ -1,0 +1,11 @@
+{
+  "explore": {
+    "title": "Explore"
+  },
+  "home": {
+    "places": {
+      "visiting": "Visiting places",
+      "my": "My places"
+    }
+  }
+}

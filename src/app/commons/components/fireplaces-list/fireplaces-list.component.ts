@@ -2,7 +2,7 @@ import { Fireplace } from './../../models/fireplaces.model';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-fireplaces-list',
+  selector: 'fp-fireplaces-list',
   templateUrl: './fireplaces-list.component.html',
   styleUrls: ['./fireplaces-list.component.css']
 })

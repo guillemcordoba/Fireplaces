@@ -5,12 +5,14 @@ import { Component, OnInit, Input } from '@angular/core';
 import * as fromRoot from '../../../reducers';
 
 @Component({
-  selector: 'app-sidenav',
+  selector: 'fp-sidenav',
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.css']
 })
 export class SidenavComponent implements OnInit {
 
+  myPlaces: Array<String> = ['Casal Sta. Maria del Jaire', 'Esplai Grifoll'];
+  visitingPlaces: Array<String> = ['AMPA CEIP La Torreta'];
   menuOpened$: Observable<boolean>;
 
   constructor(private store: Store<AppState>) { }

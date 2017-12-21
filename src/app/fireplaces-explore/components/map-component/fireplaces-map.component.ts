@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Store } from '@ngrx/store';
 
 @Component({
-  selector: 'app-fireplaces-map',
+  selector: 'fp-fireplaces-map',
   templateUrl: './fireplaces-map.component.html',
   styleUrls: ['./fireplaces-map.component.css']
 })

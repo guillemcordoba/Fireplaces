@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CommonToolbarComponent } from './common-toolbar.component';
+import { HomeToolbarComponent } from './home-toolbar.component';
 
-describe('CommonToolbarComponent', () => {
-  let component: CommonToolbarComponent;
-  let fixture: ComponentFixture<CommonToolbarComponent>;
+describe('HomeToolbarComponent', () => {
+  let component: HomeToolbarComponent;
+  let fixture: ComponentFixture<HomeToolbarComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CommonToolbarComponent ]
+      declarations: [ HomeToolbarComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CommonToolbarComponent);
+    fixture = TestBed.createComponent(HomeToolbarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

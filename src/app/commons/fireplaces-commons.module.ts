@@ -1,3 +1,4 @@
+import { TranslateModule } from '@ngx-translate/core';
 import { environment } from './../../environments/environment';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -7,7 +8,8 @@ import { TagListComponent } from './components/tag-list/tag-list.component';
 import {
   MatChipsModule,
   MatListModule,
-  MatIconModule
+  MatIconModule,
+  MatToolbarModule
 } from '@angular/material';
 import { FireplacesListComponent } from './components/fireplaces-list/fireplaces-list.component';
 import { BottomTabsComponent } from './components/bottom-tabs/bottom-tabs.component';
@@ -19,13 +21,24 @@ import { BottomTabsComponent } from './components/bottom-tabs/bottom-tabs.compon
     AngularFireDatabaseModule,
     MatChipsModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    MatToolbarModule,
+    TranslateModule
   ],
   declarations: [
     TagListComponent,
     FireplacesListComponent,
     BottomTabsComponent
   ],
-  exports: [TagListComponent, FireplacesListComponent, BottomTabsComponent]
+  exports: [
+    TagListComponent,
+    FireplacesListComponent,
+    BottomTabsComponent,
+    MatChipsModule,
+    MatListModule,
+    MatIconModule,
+    MatToolbarModule,
+    TranslateModule
+  ]
 })
 export class FireplacesCommonsModule {}

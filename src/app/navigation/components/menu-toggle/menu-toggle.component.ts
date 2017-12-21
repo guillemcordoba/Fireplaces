@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 
 @Component({
-  selector: 'app-menu-toggle',
+  selector: 'fp-menu-toggle',
   templateUrl: './menu-toggle.component.html',
   styleUrls: ['./menu-toggle.component.css']
 })
