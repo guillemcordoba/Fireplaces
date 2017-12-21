@@ -9,16 +9,41 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue.
-$fireplaces-app-primary: mat-palette($mat-indigo);
-$fireplaces-app-accent:  mat-palette($mat-pink, A200, A100, A400);
+$fireplaces-app-primary: mat-palette($mat-deep-orange);
+$fireplaces-app-accent:  mat-palette($mat-grey, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
 $fireplaces-app-warn:    mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$fireplaces-app-theme: mat-light-theme($fireplaces-app-primary, $fireplaces-app-accent, $fireplaces-app-warn);
+$fireplaces-light-theme: mat-light-theme($fireplaces-app-primary, $fireplaces-app-accent, $fireplaces-app-warn);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$fireplaces-dark-theme: mat-dark-theme($fireplaces-app-primary, $fireplaces-app-accent, $fireplaces-app-warn);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($fireplaces-app-theme);
+@include mat-core-theme($fireplaces-light-theme);
+@include mat-autocomplete-theme($fireplaces-light-theme);
+@include mat-button-theme($fireplaces-light-theme);
+@include mat-button-toggle-theme($fireplaces-light-theme);
+@include mat-card-theme($fireplaces-light-theme);
+@include mat-checkbox-theme($fireplaces-light-theme);
+@include mat-chips-theme($fireplaces-light-theme);
+@include mat-dialog-theme($fireplaces-light-theme);
+@include mat-grid-list-theme($fireplaces-light-theme);
+@include mat-icon-theme($fireplaces-light-theme);
+@include mat-input-theme($fireplaces-light-theme);
+@include mat-list-theme($fireplaces-light-theme);
+@include mat-menu-theme($fireplaces-light-theme);
+@include mat-progress-bar-theme($fireplaces-light-theme);
+@include mat-progress-spinner-theme($fireplaces-light-theme);
+@include mat-radio-theme($fireplaces-light-theme);
+@include mat-select-theme($fireplaces-light-theme);
+@include mat-sidenav-theme($fireplaces-light-theme);
+@include mat-slide-toggle-theme($fireplaces-light-theme);
+@include mat-slider-theme($fireplaces-light-theme);
+@include mat-tabs-theme($fireplaces-dark-theme);
+@include mat-toolbar-theme($fireplaces-dark-theme);
+@include mat-tooltip-theme($fireplaces-light-theme);

@@ -1,3 +1,4 @@
+import { LocationService } from './services/location.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { environment } from './../../environments/environment';
 import { NgModule } from '@angular/core';
@@ -45,6 +46,7 @@ import { RouterModule } from '@angular/router';
     MatToolbarModule,
     TranslateModule,
     RouterModule
-  ]
+  ],
+  providers: [LocationService]
 })
 export class FireplacesCommonsModule {}

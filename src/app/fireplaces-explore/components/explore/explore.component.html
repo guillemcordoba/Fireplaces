@@ -1,6 +1,6 @@
 <div fxLayout="column" fxFlexFill>
   <fp-explore-toolbar></fp-explore-toolbar>
-  <fp-fireplaces-map [location]="location$ | async" [fireplaces]="fireplaces$ | async" fxFlexFill>
+  <fp-fireplaces-map [location]="location" [fireplaces]="fireplaces$ | async" fxFlexFill>
   </fp-fireplaces-map>
   <fp-list-toolbar [tags]="tags$ | async"></fp-list-toolbar>
 </div>

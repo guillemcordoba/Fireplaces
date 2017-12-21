@@ -1,22 +1,22 @@
 <mat-sidenav-container fxFlexFill>
   <mat-sidenav mode="over" [opened]="menuOpened$ | async">
-    <mat-list role="list">
+    <mat-nav-list role="list">
       <a mat-list-item routerLink="/explore" role="listitem">
-        <mat-icon>explore</mat-icon>Explore
+        <mat-icon mat-list-icon>explore</mat-icon>Explore
       </a>
       {{'home.places.my' | translate}}
       <ng-container *ngFor="let place of myPlaces">
         <a mat-list-item [routerLink]="['/home/', place]" role="listitem">
-          <mat-icon>home</mat-icon>{{place}}
+          <mat-icon mat-list-icon>home</mat-icon>{{place}}
         </a>
       </ng-container>
       {{'home.places.visiting' | translate}}
       <ng-container *ngFor="let place of visitingPlaces">
         <a mat-list-item [routerLink]="['/home/', place]" role="listitem">
-          <mat-icon>home</mat-icon>{{place}}
+          <mat-icon mat-list-icon>home</mat-icon>{{place}}
         </a>
       </ng-container>
-    </mat-list>
+    </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <ng-content fxFlexFill></ng-content>
