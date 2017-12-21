@@ -1,11 +1,6 @@
-import { ExploreState } from './explore.state';
+import { HomeState } from './home.state';
 
-export const exploreInitialState: ExploreState = {
+export const homeInitialState: HomeState = {
   // fill it initial state here
-  currentLocation: {
-    'latitude': 41.603907,
-    'longitude': 2.300671
-  },
-  fireplaces: [],
-  tags: new Set()
+  currentFireplace: null
 };

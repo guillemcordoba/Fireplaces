@@ -21,7 +21,7 @@ export interface Tag {
 
 export interface Relationship {
     fireplace: string;
-    fireplaceLocation?: Location,
+    fireplaceLocation?: Location;
     description?: string;
     relationTag?: Tag;
 }

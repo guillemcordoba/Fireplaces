@@ -16,13 +16,13 @@ describe('ExploreEffects', () => {
         StoreModule.forRoot({}),
       ],
       providers: [
-        MapEffects,
+        ExploreEffects,
         DataPersistence,
         provideMockActions(() => actions)
       ],
     });
 
-    effects = TestBed.get(AppEffects);
+    effects = TestBed.get(ExploreEffects);
   });
 
   describe('someEffect', () => {

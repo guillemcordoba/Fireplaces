@@ -1,4 +1,4 @@
-import { ExploreEffects } from './explore.effects';
+import { HomeEffects } from './home.effects';
 import {TestBed} from '@angular/core/testing';
 import {StoreModule} from '@ngrx/store';
 import {provideMockActions} from '@ngrx/effects/testing';
@@ -6,9 +6,9 @@ import {DataPersistence} from '@nrwl/nx';
 import {readAll, hot} from '@nrwl/nx/testing';
 import {of} from 'rxjs/observable/of';
 
-describe('ExploreEffects', () => {
+describe('HomeEffects', () => {
   let actions;
-  let effects: ExploreEffects;
+  let effects: HomeEffects;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -16,13 +16,13 @@ describe('ExploreEffects', () => {
         StoreModule.forRoot({}),
       ],
       providers: [
-        MapEffects,
+        HomeEffects,
         DataPersistence,
         provideMockActions(() => actions)
       ],
     });
 
-    effects = TestBed.get(AppEffects);
+    effects = TestBed.get(HomeEffects);
   });
 
   describe('someEffect', () => {

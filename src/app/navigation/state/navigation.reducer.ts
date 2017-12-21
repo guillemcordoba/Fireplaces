@@ -10,6 +10,11 @@ export function navigationReducer(state: NavigationState = navigationInitialStat
         menuOpened: !state.menuOpened
       });
     }
+    case 'ROUTER_NAVIGATION': {
+      return Object.assign({}, state, {
+        menuOpened: false
+      });
+    }
     default: {
       return state;
     }

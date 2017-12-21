@@ -1,8 +1,7 @@
 import { Fireplace, Location, Tag } from './../../commons/models/fireplaces.model';
+import { FireplaceHome } from '../../commons/models/home.model';
 
-export interface ExploreState {
+export interface HomeState {
   // define state here
-  fireplaces: Array<Fireplace>;
-  tags: Set<string>;
-  currentLocation: Location;
+  currentFireplace: FireplaceHome;
 }

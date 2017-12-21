@@ -1,4 +1,18 @@
 <mat-toolbar class="mat-elevation-z4 toolbar-overlay" color="primary">
-  <fp-menu-toggle></fp-menu-toggle>
-  <span>Explore</span>
+  <mat-toolbar-row>
+    <fp-menu-toggle></fp-menu-toggle>
+    <span>{{fireplaceHome.fireplace.name}}</span>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row>
+    <mat-tab-group>
+      <mat-tab label="{{fireplaceHome.tabs.home.name}}">
+      </mat-tab>
+      <ng-container *ngFor="let tab of fireplaceHome.tabs.custom">
+        <mat-tab label="{{tab.name}}">
+        </mat-tab>
+      </ng-container>
+    </mat-tab-group>
+  </mat-toolbar-row>
+
 </mat-toolbar>

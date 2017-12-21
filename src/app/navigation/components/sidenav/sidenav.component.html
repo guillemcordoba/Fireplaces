@@ -6,13 +6,13 @@
       </a>
       {{'home.places.my' | translate}}
       <ng-container *ngFor="let place of myPlaces">
-        <a mat-list-item routerLink="/explore" role="listitem">
+        <a mat-list-item [routerLink]="['/home/', place]" role="listitem">
           <mat-icon>home</mat-icon>{{place}}
         </a>
       </ng-container>
       {{'home.places.visiting' | translate}}
       <ng-container *ngFor="let place of visitingPlaces">
-        <a mat-list-item routerLink="/explore" role="listitem">
+        <a mat-list-item [routerLink]="['/home/', place]" role="listitem">
           <mat-icon>home</mat-icon>{{place}}
         </a>
       </ng-container>

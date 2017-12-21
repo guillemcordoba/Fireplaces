@@ -1,20 +1,21 @@
+import { FireplaceHome } from './../../commons/models/home.model';
+import { HomeComponent } from './../components/fireplaces-home/components/home/home.component';
 import { FireplacesService } from './../../commons/services/fireplaces.service';
 import { Injectable } from '@angular/core';
 import { Effect } from '@ngrx/effects';
 import { DataPersistence } from '@nrwl/nx';
 import { of } from 'rxjs/observable/of';
-import { ExploreState } from './explore.state';
-import { FireplacesLoaded } from './explore.actions';
+import { HomeState } from './home.state';
+import { FireplaceHomeLoaded } from './home.actions';
 import { ActivatedRouteSnapshot } from '@angular/router';
-import { ExploreComponent } from '../components/explore/explore.component';
 
 @Injectable()
-export class ExploreEffects {
+export class HomeEffects {
 
-  @Effect() loadFireplaces = this.d.navigation(ExploreComponent, {
-    run: (a: ActivatedRouteSnapshot, state: ExploreState) => {
-      return this.fireplacesService.getFireplaces().map(fireplaces =>
-        new FireplacesLoaded(fireplaces));
+  @Effect() loadFireplaceHome = this.d.navigation(HomeComponent, {
+    run: (a: ActivatedRouteSnapshot, state: HomeState) => {
+      return this.fireplacesService.getFireplacesHome(a.params['fireplaceId']).map(fireplaceHome =>
+        new FireplaceHomeLoaded(fireplaceHome));
     },
     onError: (a: ActivatedRouteSnapshot, e: any) => {
       // we can log and error here and return null
@@ -23,5 +24,5 @@ export class ExploreEffects {
     }
   });
 
-  constructor(private fireplacesService: FireplacesService, private d: DataPersistence<ExploreState>) {}
+  constructor(private fireplacesService: FireplacesService, private d: DataPersistence<HomeState>) {}
 }

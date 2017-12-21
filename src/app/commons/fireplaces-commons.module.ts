@@ -9,10 +9,12 @@ import {
   MatChipsModule,
   MatListModule,
   MatIconModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatTabsModule
 } from '@angular/material';
 import { FireplacesListComponent } from './components/fireplaces-list/fireplaces-list.component';
 import { BottomTabsComponent } from './components/bottom-tabs/bottom-tabs.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
@@ -23,7 +25,9 @@ import { BottomTabsComponent } from './components/bottom-tabs/bottom-tabs.compon
     MatListModule,
     MatIconModule,
     MatToolbarModule,
-    TranslateModule
+    MatTabsModule,
+    TranslateModule,
+    RouterModule
   ],
   declarations: [
     TagListComponent,
@@ -37,8 +41,10 @@ import { BottomTabsComponent } from './components/bottom-tabs/bottom-tabs.compon
     MatChipsModule,
     MatListModule,
     MatIconModule,
+    MatTabsModule,
     MatToolbarModule,
-    TranslateModule
+    TranslateModule,
+    RouterModule
   ]
 })
 export class FireplacesCommonsModule {}

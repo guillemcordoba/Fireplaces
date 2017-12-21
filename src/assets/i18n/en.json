@@ -6,6 +6,9 @@
     "places": {
       "visiting": "Visiting places",
       "my": "My places"
+    },
+    "tabs": {
+      "home": "Home"
     }
   }
 }

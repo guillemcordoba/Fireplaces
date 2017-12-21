@@ -1,14 +1,14 @@
+import { FireplaceHome } from './../../commons/models/home.model';
 import { Fireplace } from './../../commons/models/fireplaces.model';
 import { Action } from '@ngrx/store';
 
-export const ExploreActionsTypes = {
-  fireplacesLoaded: '[EXPLORE] Fireplaces loaded'
+export const HomeActionsTypes = {
+  fireplacesLoaded: '[HOME] Fireplace home loaded'
 };
 
-export class FireplacesLoaded implements Action {
-  type = ExploreActionsTypes.fireplacesLoaded;
-  constructor(public payload: Array<Fireplace>) {}
+export class FireplaceHomeLoaded implements Action {
+  type = HomeActionsTypes.fireplacesLoaded;
+  constructor(public payload: FireplaceHome) {}
 }
 
-export type ExploreAction = FireplacesLoaded;
-
+export type HomeAction = FireplaceHomeLoaded;
