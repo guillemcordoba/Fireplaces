@@ -1,5 +1,5 @@
 <agm-map fxFlexFill [streetViewControl]="false" [zoomControl]="false" [zoom]="14" [latitude]="location?.latitude" [longitude]="location?.longitude">
-  <ng-container *ngFor="let fireplace of fireplaces">
+  <ng-container *ngFor="let fireplace of fireplaces | filterFireplaces">
 
     <agm-marker [latitude]="fireplace.location.latitude" [longitude]="fireplace.location.longitude"
       (markerClick)="openFireplace(fireplace.name)">

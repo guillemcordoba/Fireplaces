@@ -51,7 +51,7 @@ import { environment } from '../environments/environment';
     FireplacesCommonsModule,
     FireplacesExploreModule,
     FireplacesHomeModule,
-    StoreModule.forRoot({ ...reducers, routerReducer: routerReducer }),
+    StoreModule.forRoot(reducers),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     StoreRouterConnectingModule,
     EffectsModule.forRoot([]),

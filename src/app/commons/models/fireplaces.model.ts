@@ -3,7 +3,7 @@ export interface Fireplace {
   icon: string;
   location: Coordinates;
   type: string;
-  tags?: Array<Tag>;
+  tags?: Array<string>;
   parentFireplace?: number;
   relationships?: Array<Relationship>;
 }

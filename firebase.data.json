@@ -1,36 +1,45 @@
 {
   "fireplaces": {
-  "Casal Sta Maria del Jaire": {
-    "name": "Casal Sta. Maria del Jaire",
-    "icon": "",
-    "location": {
+    "Colla dels Blaus": {
+      "name": "Colla dels Blaus",
+      "icon": "",
+      "location": {
+        "latitude": 41.60227036170487,
+        "longitude": 2.282012701034546
+      },
+      "type": "Associació",
+      "tags": ["Colla", "Festa major", "Festa Major de Granollers"],
+      "relationships": []
+    },
+    "Casal Sta Maria del Jaire": {
+      "name": "Casal Sta. Maria del Jaire",
+      "icon": "",
+      "location": {
         "latitude": 41.603907,
         "longitude": 2.300671
+      },
+      "type": "Associació",
+      "tags": ["Esplai"],
+      "relationships": [
+        {
+          "fireplace": "Esplai Grifoll"
+        }
+      ]
     },
-    "type": "Associació",
-    "tags": [{
-      "name": "Esplai",
-      "description": "Centre d'educació en el lleure"
-    }],
-    "relationships": [{
-      "fireplace": "Esplai Grifoll"
-    }]
-  },
-  "Esplai Grifoll": {
-    "name": "Esplai Grifoll",
-    "icon": "",
-    "location": {
+    "Esplai Grifoll": {
+      "name": "Esplai Grifoll",
+      "icon": "",
+      "location": {
         "latitude": 41.630844,
         "longitude": 2.164118
-    },
-    "type": "Associació",
-    "tags": [{
-      "name": "Esplai",
-      "description": "Centre d'educació en el lleure"
-    }],
-    "relationships": [{
-      "fireplace": "Casal Sta Maria del Jaire"
-    }]
+      },
+      "type": "Associació",
+      "tags": ["Esplai"],
+      "relationships": [
+        {
+          "fireplace": "Casal Sta Maria del Jaire"
+        }
+      ]
+    }
   }
-}
 }

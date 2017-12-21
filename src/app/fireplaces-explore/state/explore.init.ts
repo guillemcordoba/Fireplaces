@@ -4,5 +4,9 @@ export const exploreInitialState: ExploreState = {
   // fill it initial state here
   currentLocation: undefined,
   fireplaces: [],
-  tags: new Set()
+  tags: new Set(),
+  currentFilters: {
+    tag: undefined,
+    type: undefined
+  }
 };

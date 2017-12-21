@@ -32,7 +32,15 @@ export class ExploreComponent implements OnInit {
   ngOnInit() {
     this.fireplaces$ = this.store
       .select(fromRoot.getExploreState)
-      .select(state => state.fireplaces);
+      .map(exploreState =>
+        exploreState.fireplaces.filter(
+          fireplace =>
+            (!exploreState.currentFilters.tag ||
+              fireplace.tags.includes(exploreState.currentFilters.tag)) &&
+            (!exploreState.currentFilters.type ||
+              fireplace.type === exploreState.currentFilters.type)
+        )
+      );
     this.tags$ = this.store
       .select(fromRoot.getExploreState)
       .select(state => state.tags);

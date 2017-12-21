@@ -1,5 +1,5 @@
 import { Tag } from './../../models/fireplaces.model';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'fp-tag-list',
@@ -7,12 +7,15 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./tag-list.component.css']
 })
 export class TagListComponent implements OnInit {
-
   @Input() tags: Set<Tag>;
+  @Output() tagSelected = new EventEmitter<Tag>();
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  selectTag(tag: Tag) {
+    this.tagSelected.emit(tag);
   }
 
 }

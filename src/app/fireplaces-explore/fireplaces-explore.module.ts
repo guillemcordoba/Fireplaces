@@ -1,3 +1,4 @@
+import { FilterPipe } from './filter-pipe/filter.pipe';
 import { ExploreToolbarComponent } from './components/toolbar/explore-toolbar.component';
 import { DataPersistence, NxModule } from '@nrwl/nx';
 import { AgmCoreModule } from '@agm/core';
@@ -33,12 +34,24 @@ import { FireplacesCommonsModule } from '../commons/fireplaces-commons.module';
     EffectsModule.forFeature([ExploreEffects]),
     AgmCoreModule.forRoot(environment.googlemaps),
     FlexLayoutModule,
-    MatButtonModule, MatCheckboxModule, MatToolbarModule, MatSidenavModule, MatIconModule,
-    MatListModule, MatButtonToggleModule, MatChipsModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatButtonToggleModule,
+    MatChipsModule,
     NavigationModule,
     FireplacesCommonsModule
   ],
-  declarations: [ FireplacesMapComponent, ExploreComponent, ExploreToolbarComponent, ListToolbarComponent ],
+  declarations: [
+    FilterPipe,
+    FireplacesMapComponent,
+    ExploreComponent,
+    ExploreToolbarComponent,
+    ListToolbarComponent
+  ],
   providers: []
 })
-export class FireplacesExploreModule { }
+export class FireplacesExploreModule {}

@@ -1,5 +1,5 @@
-<mat-list role="list">
-  <a mat-list-item *ngFor="let tag of tags" role="listitem">
+<mat-list role="list" fxLayout="column">
+  <button mat-list-item *ngFor="let tag of tags" (click)="selectTag(tag)" role="listitem">
     {{tag}}
-  </a>
+  </button>
 </mat-list>
