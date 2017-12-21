@@ -5,6 +5,8 @@ node_js:
 branches:
   only:
     - develop
+    - master
+    - greenhouse/
 
 before_script:
   - npm install -g firebase-tools
